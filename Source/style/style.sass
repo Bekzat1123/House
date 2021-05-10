@@ -1,0 +1,756 @@
+body
+  position: relative
+
+/* MIXINS */
+
+@mixin phoneIcon-before
+  content: ''
+  position: absolute
+  width: 30px
+  height: 30px
+  background: #fff
+  box-shadow: 0 4px 10px rgba(18, 103, 26, 0.15)
+  border-radius: 50%
+  z-index: -1
+  left: 50%
+  top: 50%
+  transform: translateX(-50%)translateY(-50%)
+  transition: all .5s ease-in-out
+@mixin styleBtn
+  display: inline-block
+  padding: 25px 45px 25px 35px
+  background: linear-gradient(180deg, #21B82F 0%, #257C25 100%)
+  box-shadow: 0 4px 15px rgba(18, 103, 26, 0.4)
+  border-radius: 32px
+  font-style: normal
+  font-weight: 500
+  font-size: 18px
+  line-height: 21px
+  color: #FBFBFB
+  transition: all .5s ease-in-out
+@mixin social-before
+  content: ''
+  position: absolute
+  left: 50%
+  top: 51%
+  transform: translateX(-37px)translateY(-40px)
+  width: 67px
+  height: 67px
+  background: transparent
+  border: 1px solid $green
+  border-radius: 50%
+  transition: all .5s ease-in-out
+@mixin social-after
+  content: ''
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translateX(-55%)translateY(-58%)
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  z-index: -1
+  background: transparent
+  border: 8px solid rgba(33, 184, 47, 0.25)
+  box-shadow: inset 0 0 0 2px rgba(33, 184, 47, 0.50)
+  transition: all .5s ease-in-out
+
+@mixin season-before
+  content: ''
+  width: 80px
+  height: 80px
+  position: absolute
+  z-index: -1
+  background: #fff
+  box-shadow: 0 4px 10px rgba(18, 103, 26, 0.15)
+  border-radius: 50%
+  left: 50%
+  top: 50%
+  transform: translateX(-50%)translateY(-60%)
+  transition: all .5s ease-in-out
+
+/* variables */
+$green:#21B82F
+
+
+/* end variables */
+
+
+
+/* END MIXINS */
+
+
+
+
+
+
+
+
+
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Roboto', sans-serif
+
+a
+  text-decoration: none
+.container
+  max-width: 1110px
+  margin: 0 auto
+.row
+  display: flex
+  flex-wrap: wrap
+
+.col-6
+  width: 50%
+.col-3
+  width: 25%
+.header__inner
+  position: absolute
+  left: 0
+  right: 0
+  padding: 30px 0
+  .row
+    justify-content: space-between
+    align-items: center
+    .company__address
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 21px
+      color: #131313
+    .company__number
+      min-width: 240px
+    .call__icon-inner
+      display: inline-block
+      position: relative
+      right: 15px
+      z-index: 1
+      &:before
+        @include phoneIcon-before
+
+  .phone__number
+    font-weight: normal
+    font-size: 24px
+    line-height: 28px
+    text-align: right
+    color: #131313
+    letter-spacing: 1px
+    span
+      font-weight: bold
+
+  .working__time
+    display: block
+    margin-top: 15px
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 21px
+    text-align: right
+    color: #131313
+
+.hero
+  background: url("/image/herobg/bgHeader 3.png")center center/ cover no-repeat
+  height: 750px
+  padding-top: 195px
+
+  &__title
+    font-style: normal
+    font-weight: bold
+    font-size: 54px
+    line-height: 77px
+    width: 650px
+    white-space: pre-line
+    span
+      color: $green
+
+  &__desc
+    display: block
+    margin: 30px 0 70px 0
+    font-style: normal
+    font-weight: normal
+    font-size: 28px
+    line-height: 33px
+    color: #131313
+  .price__btn
+    display: block
+    @include styleBtn
+    .leaf__icon-inner
+      position: relative
+      z-index: 1
+      left: 10px
+      &:before
+        @include phoneIcon-before
+        width: 26px
+        height: 26px
+
+  .social__icon
+    display: block
+    margin: 110px 0 0 25px
+
+    .wts__icon-inner
+      position: relative
+      z-index: 1
+      &:before
+        @include social-before
+      &:hover:before
+        width: 40px
+        height: 40px
+        transform: translateY(-50%)translateX(-50%)
+      &:after
+        @include social-after
+      &:hover:after
+        width: 67px
+        height: 67px
+        transform: translateY(-50%)translateX(-50%)
+
+
+    .tlg__icon-inner
+      position: relative
+      z-index: 1
+      left: 73px
+      &:before
+        @include social-before
+        transform: translateY(-59%)translateX(-47%)
+      &:hover:before
+        width: 40px
+        height: 40px
+        transform: translateY(-50%)translateX(-50%)
+      &:after
+        @include social-after
+        transform: translateY(-60%)translateX(-46%)
+      &:hover:after
+        width: 67px
+        height: 67px
+        transform: translateY(-50%)translateX(-50%)
+#menu
+  padding: 50px 0
+  margin-top: 110px
+  background: linear-gradient(90deg, #21B82F 0%, #257C25 100%)
+.menu
+  &__list
+    display: flex
+    justify-content: space-between
+    list-style-type: none
+  &__link
+    position: relative
+    font-style: normal
+    font-weight: 500
+    font-size: 20px
+    line-height: 23px
+    color: #FBFBFB
+    &:hover:before
+      content: ''
+      width: 100%
+      height: 3px
+      background: white
+      position: absolute
+      bottom: -10px
+
+
+
+
+.address
+  padding: 110px 0 85px 0
+  .address__img-inner
+    position: relative
+  .row
+    margin: 0 -125px
+    .col-6
+      padding: 0 125px
+  &__title
+    display: block
+    text-align: center
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 53px
+    color: #131313
+  &__desc
+    display: block
+    margin: 40px 0 20px 0
+    font-weight: normal
+    font-size: 20px
+    line-height: 23px
+    text-align: center
+    color: #131313
+  &__add
+    display: block
+    margin-bottom: 60px
+    font-style: normal
+    font-weight: 500
+    font-size: 22px
+    line-height: 26px
+    text-align: center
+    color: #131313
+  .address__car
+    display: inline-block
+  .icon__car-inner
+    position: relative
+    &:before
+      @include phoneIcon-before
+      transform: translateX(-55%)translateY(-53%)
+  .car__item-title
+    font-style: normal
+    font-weight: bold
+    font-size: 26px
+    line-height: 30px
+    color: #131313
+    margin-left: 20px
+  .highwai
+    display: inline-block
+    font-style: normal
+    font-size: 16px
+    line-height: 30px
+    color: #131313
+    margin: 25px 0 20px 0
+    span
+      font-weight: bold
+  .highwai__road
+    display: inline-block
+    font-style: normal
+    font-size: 16px
+    line-height: 30px
+    color: #131313
+    span
+      font-weight: bold
+  .address__img
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -1
+  .address__img-house
+    position: absolute
+    right: 0
+    bottom: 0
+.map
+  position: relative
+  &__block
+    position: absolute
+    z-index: 2
+    background: white
+    top: 80px
+    left: 50%
+    padding: 100px 100px
+    transform: translateX(-50%)
+    box-shadow: 0 10px 34px rgba(18, 103, 26, 0.25)
+  &__car-inner
+    display: inline-block
+    position: relative
+    &:before
+      content: ''
+      width: 160px
+      height: 160px
+      background: white
+      box-shadow: 0 4px 15px rgba(2, 18, 26, 0.1)
+      border-radius: 50%
+      position: absolute
+      z-index: -1
+      left: 50%
+      top: 50%
+      transform: translateY(-50%)translateX(-50%)
+
+
+  &__text
+    display: inline-block
+    margin-left: 60px
+  &__title
+    display: block
+    margin-bottom: 20px
+    font-style: normal
+    font-weight: 500
+    font-size: 34px
+    line-height: 40px
+    text-align: center
+    span
+      color: $green
+  &__desc
+    font-weight: 500
+    font-size: 34px
+    line-height: 40px
+    text-align: center
+    span
+      color: $green
+
+.house
+  min-height: 700px
+  padding: 60px
+  .row
+    margin: 0 -15px
+    .col-3
+      padding: 0 15px
+  .house__img-inner
+    position: relative
+    &:hover:before
+      content: 'Название'
+      text-align: center
+      color: white
+      width: 100%
+      height: 27px
+      position: absolute
+      bottom: 0
+      background: linear-gradient(90deg, #21B82F 0%, #257C25 100%), #21B82F
+      border-radius: 0 0 6px 6px
+      font-weight: 500
+      font-size: 18px
+      line-height: 18px
+
+  &__img
+    width: 100%
+
+
+#season
+  padding: 85px 0
+  .row
+    background: #FFFFFF
+    box-shadow: 0 10px 40px rgba(4, 24, 36, 0.1)
+    border-radius: 10px 10px 10px 100px
+  .col-3
+    background: rgba(33, 184, 47, 0.15)
+    border-radius: 10px 100px 0
+    padding: 80px 65px
+    .season__img
+      text-align: center
+    .season__img-2
+      text-align: center
+      padding: 60px 0
+    .img__inner
+      position: relative
+      z-index: 1
+      &:before
+        @include season-before
+
+    .img__desc
+      display: block
+      margin-top: 40px
+
+  .col-9
+    width: 75%
+    padding: 60px 40px 50px 80px
+  .season__btn-inner
+    position: relative
+    .summer__btn
+      display: inline-block
+      width: 360px
+      text-align: center
+      padding: 20px 0
+      font-size: 30px
+      line-height: 35px
+      color: rgba(33, 184, 47, 0.5)
+      border: 2px solid rgba(33, 184, 47, 0.5)
+      border-radius: 10px 34px 34px 10px
+    .winner__btn
+      display: inline-block
+      width: 405px
+      text-align: center
+      padding: 20px 0
+      font-weight: 500
+      font-size: 30px
+      line-height: 35px
+      color: #FBFBFB
+      background: linear-gradient(180deg, #21B82F 0%, #257C25 100%)
+      border: 2px solid rgba(33, 184, 47, 0.5)
+      border-radius: 34px 10px 10px 34px
+      position: absolute
+      right: 0
+    .season__desc-1
+      display: block
+      width: 710px
+      margin: 45px 0 20px 0
+      font-size: 16px
+      line-height: 28px
+      color: #131313
+    .season__desc-2
+      display: block
+      width: 710px
+      margin-bottom: 45px
+      font-size: 16px
+      line-height: 28px
+      color: #131313
+    .season__price
+      width: 90%
+      display: flex
+      justify-content: space-between
+      .squire__size
+        color: $green
+        font-size: 38px
+        line-height: 45px
+      .price
+        color: $green
+        font-size: 38px
+        line-height: 45px
+
+
+#credit
+  padding-top: 110px
+  background: url("/image/credit/bg.png")center center/cover no-repeat
+  height: 590px
+  .row
+    margin: 0 -85px
+  .col-6
+    padding: 0 86px
+  .bank__logo
+      display: inline-block
+      margin-top: 70px
+  .credit__title
+    display: block
+    font-weight: bold
+    font-size: 40px
+    line-height: 53px
+    color: #131313
+  .credit__desc
+    display: block
+    margin: 20px 0 35px 0
+    font-weight: normal
+    font-size: 16px
+    line-height: 28px
+    color: #131313
+  .credit__btn
+    @include styleBtn
+
+#cooperation
+  padding: 145px 0
+  .cooperation__img-inner
+    position: relative
+    min-height: 715px
+    z-index: 1
+    .cooperation__img
+      position: absolute
+      z-index: -1
+      bottom: 0
+      left: 0
+    .cooperation__img-2
+      position: absolute
+      z-index: -1
+      top: 0
+      right: 0
+  .cooperation__title
+    display: block
+    font-weight: bold
+    font-size: 40px
+    line-height: 53px
+    text-align: center
+    color: #131313
+  .cooperation__desc
+    display: block
+    width: 950px
+    margin: 40px 0 30px 0
+    font-weight: normal
+    font-size: 20px
+    line-height: 35px
+    color: #131313
+  .cooperation__desc-2
+    display: block
+    width: 950px
+    font-weight: normal
+    font-size: 20px
+    line-height: 35px
+    color: #131313
+#heading
+  .col-6-1
+    width: 50%
+    background: url("/image/heading/img1.png")center center/ cover no-repeat
+  .col-6-2
+    width: 50%
+    background: url("/image/heading/img2.png")center center/ cover no-repeat
+  .col-6-3
+    width: 50%
+    background: url("/image/heading/img3.png")center center/ cover no-repeat
+  .col-6-4
+    width: 50%
+    background: url("/image/heading/img4.png")center center/ cover no-repeat
+  .item
+    width: 460px
+    display: block
+    margin: 0 auto
+    padding: 120px 0 135px 0
+  .heading__title
+    display: block
+    margin-bottom: 20px
+    font-weight: bold
+    font-size: 30px
+    line-height: 35px
+    color: #FFFFFF
+  .heading__desc
+    display: block
+    width: 460px
+    font-weight: normal
+    font-size: 18px
+    line-height: 28px
+    color: #FFFFFF
+#info
+  padding: 160px 0
+  .info__inner
+    position: relative
+    z-index: 1
+    .info__img-1
+      position: absolute
+      top: 185px
+      left: 0
+      z-index: -1
+    .info__img-2
+      position: absolute
+      right: 0
+      top: 0
+      z-index: -1
+  .col-12
+    width: 100%
+    .info__desc
+      display: block
+      width: 870px
+      margin: 0 auto
+      font-size: 20px
+      line-height: 36px
+      text-align: center
+      color: #131313
+  .phone__icon-inner
+    position: relative
+    z-index: 1
+    right: 35px
+    &:before
+      @include phoneIcon-before
+      width: 60px
+      height: 60px
+      transform: translateX(-53%) translateY(-56%)
+  .info__number-inner
+    display: block
+    text-align: center
+    margin: 75px 0
+  .number__link
+    font-weight: bold
+    font-size: 34px
+    line-height: 34px
+    color: #21B82F
+  .working__time-info
+    display: block
+    margin: 0 auto
+    white-space: pre-line
+    font-weight: normal
+    font-size: 20px
+    line-height: 36px
+    text-align: center
+    color: #131313
+  .form__feet-back
+    display: flex
+    justify-content: space-between
+    margin-top: 90px
+  #name, #email, #number
+    padding: 25px 0 25px 40px
+    width: 260px
+    border: 1px solid rgba(33, 184, 47, 0.5)
+    box-sizing: border-box
+    border-radius: 32px
+    font-weight: normal
+    font-size: 18px
+    line-height: 21px
+    color: rgba(33, 184, 47, 0.5)
+    outline: none
+    &::placeholder
+      color: $green
+  .send__btn
+    @include styleBtn
+    width: 260px
+    border: none
+#house__slider
+  padding: 160px 0 300px 0
+  background: linear-gradient(180deg, #FFFFFF 7.27%, rgba(255, 255, 255, 0) 100.04%), url(/image/slider/bgFooter.png) center center/ cover no-repeat
+  .row
+    margin: 0 -15px
+  .item
+    position: relative
+  .slider__price-icon
+    position: relative
+
+    .img__slider-icon
+      position: absolute
+      top: 50px
+      left: 25px
+      z-index: 1
+    .price__slider
+      z-index: 2
+      position: absolute
+      top: 65px
+      left: 40px
+      color: #FFFFFF
+      font-weight: 500
+      font-size: 14px
+      line-height: 18px
+  .slider__text
+    position: absolute
+    bottom: 50px
+    left: 25px
+    .slider__desc-map
+      display: block
+      color: #FFFFFF
+      margin-bottom: 20px
+      font-weight: 500
+      font-size: 14px
+      line-height: 18px
+    .slider__name
+      display: block
+      color: #FFFFFF
+      font-weight: bold
+      font-size: 18px
+      line-height: 18px
+      text-transform: uppercase
+  .splide__arrow
+    background: transparent
+    border: 1px solid #FBFBFB
+
+  .col-4
+    padding: 0 15px
+    width: 33.3333%
+  .col-7
+    width: 60%
+    padding: 0 15px
+    margin-top: 30px
+  .col-5
+    width: 40%
+    padding: 0 15px
+    margin-top: 30px
+.footer
+  position: absolute
+  bottom: 0
+  width: 100%
+  padding: 60px
+  background: linear-gradient(90deg, rgba(33, 184, 47, 0.8) 0%, rgba(37, 124, 37, 0.8) 100%)
+  .footer__item-inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .footer__number
+    font-weight: bold
+    font-size: 34px
+    line-height: 34px
+    color: #FBFBFB
+  .time
+    display: block
+    text-align: center
+    margin-top: 20px
+    font-weight: normal
+    font-size: 18px
+    line-height: 18px
+    color: #FBFBFB
+  .footer__social
+    width: 260px
+    display: flex
+    justify-content: space-between
+#myBtn
+  display: none
+  position: fixed
+  bottom: 20px
+  right: 30px
+  z-index: 99
+  border: none
+  outline: none
+  background: transparent
+  color: white
+  cursor: pointer
+  padding: 30px
+  border-radius: 4px
+  .fa-arrow-up
+    color: #000
+    font-size: 36px
