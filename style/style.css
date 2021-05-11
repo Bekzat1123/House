@@ -99,7 +99,7 @@ a {
 }
 
 .hero {
-  background: url("/image/herobg/bgHeader 3.png") center center/cover no-repeat;
+  background: url("../image/herobg/bgHeader 3.png") center center/cover no-repeat;
   height: 750px;
   padding-top: 195px;
 }
@@ -576,7 +576,7 @@ a {
 
 #credit {
   padding-top: 110px;
-  background: url("/image/credit/bg.png") center center/cover no-repeat;
+  background: url("../image/credit/bg.png") center center/cover no-repeat;
   height: 590px;
 }
 #credit .row {
@@ -666,19 +666,19 @@ a {
 
 #heading .col-6-1 {
   width: 50%;
-  background: url("/image/heading/img1.png") center center/cover no-repeat;
+  background: url("../image/heading/img1.png") center center/cover no-repeat;
 }
 #heading .col-6-2 {
   width: 50%;
-  background: url("/image/heading/img2.png") center center/cover no-repeat;
+  background: url("../image/heading/img2.png") center center/cover no-repeat;
 }
 #heading .col-6-3 {
   width: 50%;
-  background: url("/image/heading/img3.png") center center/cover no-repeat;
+  background: url("../image/heading/img3.png") center center/cover no-repeat;
 }
 #heading .col-6-4 {
   width: 50%;
-  background: url("/image/heading/img4.png") center center/cover no-repeat;
+  background: url("../image/heading/img4.png") center center/cover no-repeat;
 }
 #heading .item {
   width: 460px;
@@ -815,7 +815,7 @@ a {
 
 #house__slider {
   padding: 160px 0 300px 0;
-  background: linear-gradient(180deg, #FFFFFF 7.27%, rgba(255, 255, 255, 0) 100.04%), url(/image/slider/bgFooter.png) center center/cover no-repeat;
+  background: linear-gradient(180deg, #FFFFFF 7.27%, rgba(255, 255, 255, 0) 100.04%), url(../image/slider/bgFooter.png) center center/cover no-repeat;
 }
 #house__slider .row {
   margin: 0 -15px;
